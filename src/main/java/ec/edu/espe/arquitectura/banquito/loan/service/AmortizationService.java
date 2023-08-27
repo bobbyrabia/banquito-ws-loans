@@ -2,6 +2,7 @@ package ec.edu.espe.arquitectura.banquito.loan.service;
 
 import ec.edu.espe.arquitectura.banquito.loan.dto.AmortizationRQ;
 import ec.edu.espe.arquitectura.banquito.loan.dto.AmortizationRS;
+import ec.edu.espe.arquitectura.banquito.loan.dto.AmortizationSimulationRQ;
 import ec.edu.espe.arquitectura.banquito.loan.model.Amortization;
 import ec.edu.espe.arquitectura.banquito.loan.model.Loan;
 import ec.edu.espe.arquitectura.banquito.loan.repository.AmortizationRepository;
@@ -10,8 +11,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -103,6 +106,102 @@ public class AmortizationService {
         }else {
             throw new RuntimeException("Type not found");
         }
+    }
+
+    public List<AmortizationRS> simulateAmortization(AmortizationSimulationRQ amortizationRQ){
+
+        double interestRate = 0.13;
+        int scale = 2;
+        RoundingMode roundingMode = RoundingMode.HALF_EVEN;
+        if (amortizationRQ.getType().equals("FRA")){
+            BigDecimal tasaInteresMensual =  BigDecimal.valueOf(interestRate / 12.0);
+            BigDecimal cuotaMensual = calcularCuotaMensualFrances(
+                    amortizationRQ.getAmount(),
+                    tasaInteresMensual,
+                    amortizationRQ.getRepaymentInstallments());
+
+            List<Amortization> amortizationList = new ArrayList<>();
+            BigDecimal remainingBalance = amortizationRQ.getAmount();
+
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(new Date());
+            // Fixed day of month
+//        int month = calendar.get(Calendar.MONTH) + 1;
+//        int year = calendar.get(Calendar.YEAR);
+//        int dayOfMonth = loan.getFixedDaysOfMonth();
+//        calendar.set(year, month, dayOfMonth);
+            for (int i = 0; i < amortizationRQ.getRepaymentInstallments(); i++) {
+                BigDecimal quotaInterest = remainingBalance.multiply(tasaInteresMensual);
+                BigDecimal quotaCapital = cuotaMensual.subtract(quotaInterest);
+                remainingBalance = remainingBalance.subtract(quotaCapital);
+                Amortization amortization = Amortization.builder()
+                        .type(amortizationRQ.getType())
+                        .quotaNum(i + 1)
+                        .quotaCapital(quotaCapital.setScale(scale, roundingMode))
+                        .quotaInterest(quotaInterest.setScale(scale, roundingMode))
+                        .quotaAmount(cuotaMensual.setScale(scale, roundingMode))
+                        .remainingBalance(remainingBalance.setScale(scale, roundingMode))
+                        .dueDate(calendar.getTime())
+                        .build();
+                if (i == 0) {
+                    amortization.setQuotaStatus("CUR");
+                } else {
+                    amortization.setQuotaStatus("PEN");
+                }
+                calendar.add(Calendar.MONTH, 1);
+                amortizationList.add(amortization);
+            }
+            return toAmortizationRSListS(amortizationList);
+        } else if (amortizationRQ.getType().equals("ALE")){
+            BigDecimal tasaInteresMensual =  BigDecimal.valueOf(interestRate / 12.0);
+            List<Amortization> amortizationList = new ArrayList<>();
+            BigDecimal remainingBalance = amortizationRQ.getAmount();
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(new Date());
+            for (int i = 0; i < amortizationRQ.getRepaymentInstallments(); i++) {
+                BigDecimal quotaInterest = remainingBalance.multiply(BigDecimal.ONE.add(tasaInteresMensual)).subtract(remainingBalance);
+//                BigDecimal quotaCapital = loan.getAmount().divide(BigDecimal.valueOf(loan.getRepaymentInstallments()));
+                BigDecimal quotaCapital = calcularCuotaAleman(amortizationRQ.getAmount().doubleValue(),amortizationRQ.getRepaymentInstallments());
+                BigDecimal quotaAmount = quotaCapital.add(quotaInterest);
+                remainingBalance = remainingBalance.subtract(quotaCapital);
+                Amortization amortization = Amortization.builder()
+                        .type(amortizationRQ.getType())
+                        .quotaNum(i + 1)
+                        .quotaCapital(quotaCapital.setScale(scale, roundingMode))
+                        .quotaInterest(quotaInterest.setScale(scale, roundingMode))
+                        .quotaAmount(quotaAmount.setScale(scale, roundingMode))
+                        .remainingBalance(remainingBalance.setScale(scale, roundingMode))
+                        .dueDate(calendar.getTime())
+                        .build();
+                calendar.add(Calendar.MONTH, 1);
+                if (i == 0) {
+                    amortization.setQuotaStatus("CUR");
+                } else {
+                    amortization.setQuotaStatus("PEN");
+                }
+                amortizationList.add(amortization);
+            }
+            return toAmortizationRSListS(amortizationList);
+        }else {
+            throw new RuntimeException("Type not found");
+        }
+    }
+
+    private List<AmortizationRS> toAmortizationRSListS(List<Amortization> amortizationList) {
+        List<AmortizationRS> amortizationRSList = new ArrayList<>();
+        for (Amortization amortization : amortizationList) {
+            AmortizationRS amortizationRS = new AmortizationRS();
+            amortizationRS.setType(amortization.getType());
+            amortizationRS.setQuotaNum(amortization.getQuotaNum());
+            amortizationRS.setDueDate(amortization.getDueDate());
+            amortizationRS.setQuotaCapital(amortization.getQuotaCapital());
+            amortizationRS.setQuotaInterest(amortization.getQuotaInterest());
+            amortizationRS.setQuotaAmount(amortization.getQuotaAmount());
+            amortizationRS.setRemainingBalance(amortization.getRemainingBalance());
+            amortizationRS.setQuotaStatus(amortization.getQuotaStatus());
+            amortizationRSList.add(amortizationRS);
+        }
+        return amortizationRSList;
     }
 
     private BigDecimal calcularCuotaAleman(double loanAmount, Integer repaymentInstallments) {

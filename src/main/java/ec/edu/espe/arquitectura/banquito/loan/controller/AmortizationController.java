@@ -2,6 +2,7 @@ package ec.edu.espe.arquitectura.banquito.loan.controller;
 
 import ec.edu.espe.arquitectura.banquito.loan.dto.AmortizationRQ;
 import ec.edu.espe.arquitectura.banquito.loan.dto.AmortizationRS;
+import ec.edu.espe.arquitectura.banquito.loan.dto.AmortizationSimulationRQ;
 import ec.edu.espe.arquitectura.banquito.loan.model.Amortization;
 import ec.edu.espe.arquitectura.banquito.loan.service.AmortizationService;
 import org.springframework.http.ResponseEntity;
@@ -30,6 +31,10 @@ public class AmortizationController {
     @GetMapping("/findByLoan-status/{uuid}/{quotaStatus}")
     public ResponseEntity<List<AmortizationRS>> findByLoanAndQuotaStatus(@PathVariable(name = "uuid") String uuid, @PathVariable(name = "quotaStatus") String quotaStatus) {
         return ResponseEntity.ok(amortizationService.findByLoanUuidAndQuotaStatus(uuid, quotaStatus));
+    }
+    @GetMapping("/simulate")
+    public ResponseEntity<List<AmortizationRS>> simulateAmortization(@RequestBody AmortizationSimulationRQ amortizationRQ) {
+        return ResponseEntity.ok(amortizationService.simulateAmortization(amortizationRQ));
     }
 
 }
