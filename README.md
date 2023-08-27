@@ -1,2 +1,2 @@
-# banquito-ws-loans
-Banquito Loans
+# banquito-ws-loan
+Repository for backend Administration microservice web service
