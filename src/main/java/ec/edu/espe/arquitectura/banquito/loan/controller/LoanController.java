@@ -20,11 +20,9 @@ import java.util.List;
 @CrossOrigin
 public class LoanController {
     private final LoanService loanService;
-    private final RestTemplate restTemplate;
 
-    public LoanController(LoanService loanService, RestTemplate restTemplate) {
+    public LoanController(LoanService loanService) {
         this.loanService = loanService;
-        this.restTemplate = restTemplate;
     }
 
     @GetMapping("/{uuid}")
@@ -50,7 +48,7 @@ public class LoanController {
         }
     }
 
-    @PostMapping("/guaranty")
+        @PostMapping("/guaranty")
     public ResponseEntity<Guaranty> createGuaranty(@RequestBody GuarantyRQ guaranty) {
         try {
             Guaranty guarantyRS = this.loanService.createGuaranty(guaranty);
@@ -71,29 +69,6 @@ public class LoanController {
         } catch (RuntimeException rte) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(rte.getMessage());
 
-        }
-    }
-
-    @GetMapping("/products/{uuid}")
-    public ResponseEntity<LoanProductRS> obtainProductByUuid(
-            @PathVariable(name = "uuid") String uuid) {
-        try {
-            String url = "http://localhost:9004/api/v1/loanProduct/productos/" + uuid;
-            LoanProductRS loanProduct = this.restTemplate.getForObject(url, LoanProductRS.class);
-            return ResponseEntity.ok(loanProduct);
-        } catch (RuntimeException rte) {
-            return ResponseEntity.notFound().build();
-        }
-    }
-
-    @GetMapping("/products")
-    public ResponseEntity<LoanProductRS[]> obtainProducts() {
-        try {
-            String url = "http://localhost:9004/api/v1/loanProduct/productos";
-            LoanProductRS[] products = this.restTemplate.getForEntity(url, LoanProductRS[].class).getBody();
-            return ResponseEntity.ok(products);
-        } catch (RuntimeException rte) {
-            return ResponseEntity.notFound().build();
         }
     }
 
