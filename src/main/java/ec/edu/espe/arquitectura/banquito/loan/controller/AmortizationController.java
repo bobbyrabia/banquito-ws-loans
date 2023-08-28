@@ -33,7 +33,7 @@ public class AmortizationController {
     public ResponseEntity<List<AmortizationRS>> findByLoanAndQuotaStatus(@PathVariable(name = "uuid") String uuid, @PathVariable(name = "quotaStatus") String quotaStatus) {
         return ResponseEntity.ok(amortizationService.findByLoanUuidAndQuotaStatus(uuid, quotaStatus));
     }
-    @GetMapping("/simulate")
+    @PostMapping("/simulate")
     public ResponseEntity<List<AmortizationRS>> simulateAmortization(@RequestBody AmortizationSimulationRQ amortizationRQ) {
         return ResponseEntity.ok(amortizationService.simulateAmortization(amortizationRQ));
     }

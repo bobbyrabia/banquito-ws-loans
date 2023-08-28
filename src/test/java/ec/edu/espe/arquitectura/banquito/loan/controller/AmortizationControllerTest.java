@@ -102,7 +102,7 @@ class AmortizationControllerTest {
         List<AmortizationRS> amortizationRSList = List.of(amortizationRS);
         given(amortizationService.simulateAmortization(amortizationRQ)).willReturn(amortizationRSList);
         //when
-        ResultActions response = mockMvc.perform(get(URL + "/simulate")
+        ResultActions response = mockMvc.perform(post(URL + "/simulate")
                 .contentType("application/json")
                 .content(objectMapper.writeValueAsString(amortizationRQ)));
         //then
