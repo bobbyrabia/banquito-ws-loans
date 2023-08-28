@@ -10,9 +10,7 @@ import ec.edu.espe.arquitectura.banquito.loan.repository.LoanRepository;
 import jakarta.transaction.Transactional;
 
 import java.math.BigDecimal;
-import java.util.Date;
-import java.util.Optional;
-import java.util.UUID;
+import java.util.*;
 
 import org.springframework.stereotype.Service;
 
@@ -35,6 +33,35 @@ public class LoanService {
         } else {
             return loanTmp;
         }
+    }
+
+    public List<LoanRS> listByAccountId(Integer accountId) {
+        List<Loan> loan = this.loanRepository.findByAccountId(accountId);
+        List<LoanRS> loanRSList = this.transformLoanRSList(loan);
+        if (loanRSList.isEmpty()) {
+            throw new RuntimeException("La cuenta no tiene préstamos asociados");
+        }
+         return loanRSList;
+    }
+
+    private List<LoanRS> transformLoanRSList(List<Loan> loan) {
+        List<LoanRS> loanRSList = new ArrayList<>();
+        for (Loan loanTmp : loan) {
+            LoanRS loanRS = LoanRS.builder().accountId(loanTmp.getAccountId()).guarantyId(loanTmp.getGuarantyId())
+                    .branchId(loanTmp.getBranchId()).loanProductId(loanTmp.getLoanProductId())
+                    .accountHolderType(loanTmp.getAccountHolderType())
+                    .state(loanTmp.getState()).name(loanTmp.getName()).amount(loanTmp.getAmount())
+                    .principalPaid(loanTmp.getPrincipalPaid()).interestPaid(loanTmp.getInterestPaid())
+                    .penalityPaid(loanTmp.getPenalityPaid()).repaymentPeriodCount(loanTmp.getRepaymentPeriodCount())
+                    .repaymentPeriodUnit(loanTmp.getRepaymentPeriodUnit()).creationDate(loanTmp.getCreationDate())
+                    .approvedDate(loanTmp.getApprovedDate()).lastModifiedDate(loanTmp.getLastModifiedDate())
+                    .principalDue(loanTmp.getPrincipalDue()).interestDue(loanTmp.getInterestDue())
+                    .penalityDue(loanTmp.getPenalityDue())
+                    .repaymentInstallments(loanTmp.getRepaymentInstallments()).interestRate(loanTmp.getInterestRate())
+                    .uuid(loanTmp.getUuid()).id(loanTmp.getId()).build();
+            loanRSList.add(loanRS);
+        }
+        return loanRSList;
     }
 
     @Transactional

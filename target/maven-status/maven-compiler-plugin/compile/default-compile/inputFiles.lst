@@ -1,26 +1,26 @@
-C:\ARQUITECTURA\DEFINITIVE\banquito-ws-loans\src\main\java\ec\edu\espe\arquitectura\banquito\loan\model\Loan.java
-C:\ARQUITECTURA\DEFINITIVE\banquito-ws-loans\src\main\java\ec\edu\espe\arquitectura\banquito\loan\model\Repayment.java
-C:\ARQUITECTURA\DEFINITIVE\banquito-ws-loans\src\main\java\ec\edu\espe\arquitectura\banquito\loan\dto\RepaymentRQ.java
-C:\ARQUITECTURA\DEFINITIVE\banquito-ws-loans\src\main\java\ec\edu\espe\arquitectura\banquito\loan\service\AmortizationService.java
-C:\ARQUITECTURA\DEFINITIVE\banquito-ws-loans\src\main\java\ec\edu\espe\arquitectura\banquito\loan\controller\AmortizationController.java
-C:\ARQUITECTURA\DEFINITIVE\banquito-ws-loans\src\main\java\ec\edu\espe\arquitectura\banquito\loan\dto\AmortizationRQ.java
-C:\ARQUITECTURA\DEFINITIVE\banquito-ws-loans\src\main\java\ec\edu\espe\arquitectura\banquito\loan\controller\RepaymentController.java
-C:\ARQUITECTURA\DEFINITIVE\banquito-ws-loans\src\main\java\ec\edu\espe\arquitectura\banquito\loan\dto\LoanProductRS.java
-C:\ARQUITECTURA\DEFINITIVE\banquito-ws-loans\src\main\java\ec\edu\espe\arquitectura\banquito\loan\dto\GuarantyRQ.java
-C:\ARQUITECTURA\DEFINITIVE\banquito-ws-loans\src\main\java\ec\edu\espe\arquitectura\banquito\loan\repository\RepaymentRepository.java
-C:\ARQUITECTURA\DEFINITIVE\banquito-ws-loans\src\main\java\ec\edu\espe\arquitectura\banquito\loan\repository\GuarantyRepository.java
-C:\ARQUITECTURA\DEFINITIVE\banquito-ws-loans\src\main\java\ec\edu\espe\arquitectura\banquito\loan\dto\AmortizationSimulationRQ.java
-C:\ARQUITECTURA\DEFINITIVE\banquito-ws-loans\src\main\java\ec\edu\espe\arquitectura\banquito\loan\dto\LoanRQ.java
-C:\ARQUITECTURA\DEFINITIVE\banquito-ws-loans\src\main\java\ec\edu\espe\arquitectura\banquito\loan\model\Amortization.java
-C:\ARQUITECTURA\DEFINITIVE\banquito-ws-loans\src\main\java\ec\edu\espe\arquitectura\banquito\loan\controller\LoanController.java
-C:\ARQUITECTURA\DEFINITIVE\banquito-ws-loans\src\main\java\ec\edu\espe\arquitectura\banquito\loan\dto\LoanRS.java
-C:\ARQUITECTURA\DEFINITIVE\banquito-ws-loans\src\main\java\ec\edu\espe\arquitectura\banquito\loan\dto\ProductArrearsSettingDto.java
-C:\ARQUITECTURA\DEFINITIVE\banquito-ws-loans\src\main\java\ec\edu\espe\arquitectura\banquito\loan\model\Guaranty.java
-C:\ARQUITECTURA\DEFINITIVE\banquito-ws-loans\src\main\java\ec\edu\espe\arquitectura\banquito\loan\dto\LoanRequirementsDto.java
-C:\ARQUITECTURA\DEFINITIVE\banquito-ws-loans\src\main\java\ec\edu\espe\arquitectura\banquito\loan\service\LoanService.java
-C:\ARQUITECTURA\DEFINITIVE\banquito-ws-loans\src\main\java\ec\edu\espe\arquitectura\banquito\loan\dto\AmortizationRS.java
-C:\ARQUITECTURA\DEFINITIVE\banquito-ws-loans\src\main\java\ec\edu\espe\arquitectura\banquito\loan\repository\AmortizationRepository.java
-C:\ARQUITECTURA\DEFINITIVE\banquito-ws-loans\src\main\java\ec\edu\espe\arquitectura\banquito\loan\repository\LoanRepository.java
-C:\ARQUITECTURA\DEFINITIVE\banquito-ws-loans\src\main\java\ec\edu\espe\arquitectura\banquito\loan\dto\RepaymentRS.java
-C:\ARQUITECTURA\DEFINITIVE\banquito-ws-loans\src\main\java\ec\edu\espe\arquitectura\banquito\loan\LoanApplication.java
-C:\ARQUITECTURA\DEFINITIVE\banquito-ws-loans\src\main\java\ec\edu\espe\arquitectura\banquito\loan\service\RepaymentService.java
+C:\Users\Omar\Desktop\ME\PILOSO U\Arqui\Preyecto Arqui\newLoan\src\main\java\ec\edu\espe\arquitectura\banquito\loan\service\RepaymentService.java
+C:\Users\Omar\Desktop\ME\PILOSO U\Arqui\Preyecto Arqui\newLoan\src\main\java\ec\edu\espe\arquitectura\banquito\loan\repository\RepaymentRepository.java
+C:\Users\Omar\Desktop\ME\PILOSO U\Arqui\Preyecto Arqui\newLoan\src\main\java\ec\edu\espe\arquitectura\banquito\loan\model\Repayment.java
+C:\Users\Omar\Desktop\ME\PILOSO U\Arqui\Preyecto Arqui\newLoan\src\main\java\ec\edu\espe\arquitectura\banquito\loan\controller\RepaymentController.java
+C:\Users\Omar\Desktop\ME\PILOSO U\Arqui\Preyecto Arqui\newLoan\src\main\java\ec\edu\espe\arquitectura\banquito\loan\dto\AmortizationSimulationRQ.java
+C:\Users\Omar\Desktop\ME\PILOSO U\Arqui\Preyecto Arqui\newLoan\src\main\java\ec\edu\espe\arquitectura\banquito\loan\dto\LoanRequirementsDto.java
+C:\Users\Omar\Desktop\ME\PILOSO U\Arqui\Preyecto Arqui\newLoan\src\main\java\ec\edu\espe\arquitectura\banquito\loan\dto\ProductArrearsSettingDto.java
+C:\Users\Omar\Desktop\ME\PILOSO U\Arqui\Preyecto Arqui\newLoan\src\main\java\ec\edu\espe\arquitectura\banquito\loan\controller\LoanController.java
+C:\Users\Omar\Desktop\ME\PILOSO U\Arqui\Preyecto Arqui\newLoan\src\main\java\ec\edu\espe\arquitectura\banquito\loan\service\AmortizationService.java
+C:\Users\Omar\Desktop\ME\PILOSO U\Arqui\Preyecto Arqui\newLoan\src\main\java\ec\edu\espe\arquitectura\banquito\loan\controller\AmortizationController.java
+C:\Users\Omar\Desktop\ME\PILOSO U\Arqui\Preyecto Arqui\newLoan\src\main\java\ec\edu\espe\arquitectura\banquito\loan\dto\GuarantyRQ.java
+C:\Users\Omar\Desktop\ME\PILOSO U\Arqui\Preyecto Arqui\newLoan\src\main\java\ec\edu\espe\arquitectura\banquito\loan\dto\RepaymentRQ.java
+C:\Users\Omar\Desktop\ME\PILOSO U\Arqui\Preyecto Arqui\newLoan\src\main\java\ec\edu\espe\arquitectura\banquito\loan\service\LoanService.java
+C:\Users\Omar\Desktop\ME\PILOSO U\Arqui\Preyecto Arqui\newLoan\src\main\java\ec\edu\espe\arquitectura\banquito\loan\dto\AmortizationRQ.java
+C:\Users\Omar\Desktop\ME\PILOSO U\Arqui\Preyecto Arqui\newLoan\src\main\java\ec\edu\espe\arquitectura\banquito\loan\model\Guaranty.java
+C:\Users\Omar\Desktop\ME\PILOSO U\Arqui\Preyecto Arqui\newLoan\src\main\java\ec\edu\espe\arquitectura\banquito\loan\repository\GuarantyRepository.java
+C:\Users\Omar\Desktop\ME\PILOSO U\Arqui\Preyecto Arqui\newLoan\src\main\java\ec\edu\espe\arquitectura\banquito\loan\dto\LoanRQ.java
+C:\Users\Omar\Desktop\ME\PILOSO U\Arqui\Preyecto Arqui\newLoan\src\main\java\ec\edu\espe\arquitectura\banquito\loan\repository\LoanRepository.java
+C:\Users\Omar\Desktop\ME\PILOSO U\Arqui\Preyecto Arqui\newLoan\src\main\java\ec\edu\espe\arquitectura\banquito\loan\dto\LoanRS.java
+C:\Users\Omar\Desktop\ME\PILOSO U\Arqui\Preyecto Arqui\newLoan\src\main\java\ec\edu\espe\arquitectura\banquito\loan\LoanApplication.java
+C:\Users\Omar\Desktop\ME\PILOSO U\Arqui\Preyecto Arqui\newLoan\src\main\java\ec\edu\espe\arquitectura\banquito\loan\model\Loan.java
+C:\Users\Omar\Desktop\ME\PILOSO U\Arqui\Preyecto Arqui\newLoan\src\main\java\ec\edu\espe\arquitectura\banquito\loan\model\Amortization.java
+C:\Users\Omar\Desktop\ME\PILOSO U\Arqui\Preyecto Arqui\newLoan\src\main\java\ec\edu\espe\arquitectura\banquito\loan\dto\LoanProductRS.java
+C:\Users\Omar\Desktop\ME\PILOSO U\Arqui\Preyecto Arqui\newLoan\src\main\java\ec\edu\espe\arquitectura\banquito\loan\repository\AmortizationRepository.java
+C:\Users\Omar\Desktop\ME\PILOSO U\Arqui\Preyecto Arqui\newLoan\src\main\java\ec\edu\espe\arquitectura\banquito\loan\dto\AmortizationRS.java
+C:\Users\Omar\Desktop\ME\PILOSO U\Arqui\Preyecto Arqui\newLoan\src\main\java\ec\edu\espe\arquitectura\banquito\loan\dto\RepaymentRS.java
