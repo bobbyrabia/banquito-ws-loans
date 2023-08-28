@@ -13,6 +13,8 @@ import ec.edu.espe.arquitectura.banquito.loan.model.Guaranty;
 import ec.edu.espe.arquitectura.banquito.loan.model.Loan;
 import ec.edu.espe.arquitectura.banquito.loan.service.LoanService;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/v2/loans")
 @CrossOrigin
@@ -95,4 +97,12 @@ public class LoanController {
         }
     }
 
+    @GetMapping("/getLoansByAccount/{accountId}")
+    public ResponseEntity<List<LoanRS>> obtainLoansByAccount(@PathVariable(name = "accountId") Integer accountId) {
+        try {
+            return ResponseEntity.ok( this.loanService.listByAccountId(accountId));
+        } catch (RuntimeException rte) {
+            return ResponseEntity.notFound().build();
+        }
+    }
 }
