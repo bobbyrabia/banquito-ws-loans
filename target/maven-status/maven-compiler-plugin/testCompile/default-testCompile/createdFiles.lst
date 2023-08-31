@@ -1,5 +1,5 @@
 ec\edu\espe\arquitectura\banquito\loan\controller\RepaymentControllerTest.class
-ec\edu\espe\arquitectura\banquito\loan\service\RepaymentServiceTest.class
-ec\edu\espe\arquitectura\banquito\loan\controller\AmortizationControllerTest.class
 ec\edu\espe\arquitectura\banquito\loan\LoanApplicationTests.class
 ec\edu\espe\arquitectura\banquito\loan\service\AmortizationServiceTest.class
+ec\edu\espe\arquitectura\banquito\loan\service\RepaymentServiceTest.class
+ec\edu\espe\arquitectura\banquito\loan\controller\AmortizationControllerTest.class
