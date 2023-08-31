@@ -17,7 +17,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v2/loans")
-@CrossOrigin({"*"})
 public class LoanController {
     private final LoanService loanService;
 

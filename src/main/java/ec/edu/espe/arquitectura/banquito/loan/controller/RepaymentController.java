@@ -11,7 +11,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/repayment")
-@CrossOrigin({"*"})
 public class RepaymentController {
     private final RepaymentService repaymentService;
 

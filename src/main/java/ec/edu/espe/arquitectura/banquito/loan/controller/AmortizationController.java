@@ -12,7 +12,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/v1/amortization")
-@CrossOrigin({"*"})
 public class AmortizationController {
 
     private final AmortizationService amortizationService;
