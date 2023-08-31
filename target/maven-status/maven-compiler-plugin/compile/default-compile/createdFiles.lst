@@ -10,6 +10,7 @@ ec\edu\espe\arquitectura\banquito\loan\service\AmortizationService.class
 ec\edu\espe\arquitectura\banquito\loan\dto\AmortizationRQ$AmortizationRQBuilder.class
 ec\edu\espe\arquitectura\banquito\loan\dto\AmortizationSimulationRQ$AmortizationSimulationRQBuilder.class
 ec\edu\espe\arquitectura\banquito\loan\dto\RepaymentRQ$RepaymentRQBuilder.class
+ec\edu\espe\arquitectura\banquito\loan\config\Cors.class
 ec\edu\espe\arquitectura\banquito\loan\dto\LoanRQ.class
 ec\edu\espe\arquitectura\banquito\loan\model\Repayment.class
 ec\edu\espe\arquitectura\banquito\loan\repository\GuarantyRepository.class
@@ -31,6 +32,7 @@ ec\edu\espe\arquitectura\banquito\loan\controller\AmortizationController.class
 ec\edu\espe\arquitectura\banquito\loan\dto\AmortizationRS$AmortizationRSBuilder.class
 ec\edu\espe\arquitectura\banquito\loan\model\Loan$LoanBuilder.class
 ec\edu\espe\arquitectura\banquito\loan\model\Loan.class
+ec\edu\espe\arquitectura\banquito\loan\config\Cors$1.class
 ec\edu\espe\arquitectura\banquito\loan\dto\RepaymentRS.class
 ec\edu\espe\arquitectura\banquito\loan\model\Amortization$AmortizationBuilder.class
 ec\edu\espe\arquitectura\banquito\loan\repository\LoanRepository.class
