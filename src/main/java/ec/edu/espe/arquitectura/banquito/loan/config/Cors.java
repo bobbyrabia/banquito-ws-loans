@@ -17,7 +17,7 @@ public class Cors {
                         .allowedOrigins("https://banquito-backoffice.web.app")
                         .allowedOrigins("https://banquito-web.web.app")
                         .allowedOrigins("https://banquito-tellerapp.web.app")
-                        .exposedHeaders("Content-Disposition")
+                        .exposedHeaders("Content-Disposition","Content-Type")
                         .allowedMethods("*");
             }
         };
