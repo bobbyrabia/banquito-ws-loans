@@ -1,7 +1,7 @@
-D:\deberes\espe\2023 primero\arquitectura\tercer parcial\BackendBanquito\banquito-ws-loans\src\test\java\ec\edu\espe\arquitectura\banquito\loan\service\RepaymentServiceTest.java
-D:\deberes\espe\2023 primero\arquitectura\tercer parcial\BackendBanquito\banquito-ws-loans\src\test\java\ec\edu\espe\arquitectura\banquito\loan\service\LoanServiceTest.java
-D:\deberes\espe\2023 primero\arquitectura\tercer parcial\BackendBanquito\banquito-ws-loans\src\test\java\ec\edu\espe\arquitectura\banquito\loan\service\AmortizationServiceTest.java
-D:\deberes\espe\2023 primero\arquitectura\tercer parcial\BackendBanquito\banquito-ws-loans\src\test\java\ec\edu\espe\arquitectura\banquito\loan\controller\LoanControllerTest.java
-D:\deberes\espe\2023 primero\arquitectura\tercer parcial\BackendBanquito\banquito-ws-loans\src\test\java\ec\edu\espe\arquitectura\banquito\loan\controller\RepaymentControllerTest.java
-D:\deberes\espe\2023 primero\arquitectura\tercer parcial\BackendBanquito\banquito-ws-loans\src\test\java\ec\edu\espe\arquitectura\banquito\loan\LoanApplicationTests.java
-D:\deberes\espe\2023 primero\arquitectura\tercer parcial\BackendBanquito\banquito-ws-loans\src\test\java\ec\edu\espe\arquitectura\banquito\loan\controller\AmortizationControllerTest.java
+E:\SEMESTRE 23-23\ARQUITECTURA\Arquitectura Final\Backend\banquito-ws-loans\src\test\java\ec\edu\espe\arquitectura\banquito\loan\service\RepaymentServiceTest.java
+E:\SEMESTRE 23-23\ARQUITECTURA\Arquitectura Final\Backend\banquito-ws-loans\src\test\java\ec\edu\espe\arquitectura\banquito\loan\LoanApplicationTests.java
+E:\SEMESTRE 23-23\ARQUITECTURA\Arquitectura Final\Backend\banquito-ws-loans\src\test\java\ec\edu\espe\arquitectura\banquito\loan\controller\AmortizationControllerTest.java
+E:\SEMESTRE 23-23\ARQUITECTURA\Arquitectura Final\Backend\banquito-ws-loans\src\test\java\ec\edu\espe\arquitectura\banquito\loan\service\AmortizationServiceTest.java
+E:\SEMESTRE 23-23\ARQUITECTURA\Arquitectura Final\Backend\banquito-ws-loans\src\test\java\ec\edu\espe\arquitectura\banquito\loan\controller\LoanControllerTest.java
+E:\SEMESTRE 23-23\ARQUITECTURA\Arquitectura Final\Backend\banquito-ws-loans\src\test\java\ec\edu\espe\arquitectura\banquito\loan\controller\RepaymentControllerTest.java
+E:\SEMESTRE 23-23\ARQUITECTURA\Arquitectura Final\Backend\banquito-ws-loans\src\test\java\ec\edu\espe\arquitectura\banquito\loan\service\LoanServiceTest.java
