@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/amortization")
+@RequestMapping("api/v1/amortization")
 public class AmortizationController {
 
     private final AmortizationService amortizationService;
