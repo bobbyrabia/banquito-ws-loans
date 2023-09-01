@@ -18,6 +18,7 @@ public class CorsConfig {
                         .allowedOrigins("https://banquito-web.web.app")
                         .allowedOrigins("https://banquito-tellerapp.web.app")
                         .allowedOrigins("http://localhost:4200")
+                        .allowedOrigins("https://banquito-bancaweb-v2.web.app")
                         .exposedHeaders("Content-Disposition","Content-Type")
                         .allowedMethods("*");
             }
