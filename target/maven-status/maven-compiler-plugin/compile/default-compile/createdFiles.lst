@@ -10,7 +10,6 @@ ec\edu\espe\arquitectura\banquito\loan\service\AmortizationService.class
 ec\edu\espe\arquitectura\banquito\loan\dto\AmortizationRQ$AmortizationRQBuilder.class
 ec\edu\espe\arquitectura\banquito\loan\dto\AmortizationSimulationRQ$AmortizationSimulationRQBuilder.class
 ec\edu\espe\arquitectura\banquito\loan\dto\RepaymentRQ$RepaymentRQBuilder.class
-ec\edu\espe\arquitectura\banquito\loan\config\Cors.class
 ec\edu\espe\arquitectura\banquito\loan\dto\LoanRQ.class
 ec\edu\espe\arquitectura\banquito\loan\model\Repayment.class
 ec\edu\espe\arquitectura\banquito\loan\repository\GuarantyRepository.class
@@ -18,12 +17,14 @@ ec\edu\espe\arquitectura\banquito\loan\controller\RepaymentController.class
 ec\edu\espe\arquitectura\banquito\loan\dto\GuarantyRQ.class
 ec\edu\espe\arquitectura\banquito\loan\model\Guaranty$GuarantyBuilder.class
 ec\edu\espe\arquitectura\banquito\loan\dto\RepaymentRQ.class
+ec\edu\espe\arquitectura\banquito\loan\config\CorsConfig$1.class
 ec\edu\espe\arquitectura\banquito\loan\service\LoanService.class
 ec\edu\espe\arquitectura\banquito\loan\dto\LoanRequirementsDto.class
 ec\edu\espe\arquitectura\banquito\loan\dto\AmortizationRS.class
 ec\edu\espe\arquitectura\banquito\loan\repository\RepaymentRepository.class
 ec\edu\espe\arquitectura\banquito\loan\controller\LoanController.class
 ec\edu\espe\arquitectura\banquito\loan\dto\AmortizationRQ.class
+ec\edu\espe\arquitectura\banquito\loan\config\CorsConfig.class
 ec\edu\espe\arquitectura\banquito\loan\dto\RepaymentRS$RepaymentRSBuilder.class
 ec\edu\espe\arquitectura\banquito\loan\model\Amortization.class
 ec\edu\espe\arquitectura\banquito\loan\dto\LoanRS$LoanRSBuilder.class
@@ -32,7 +33,6 @@ ec\edu\espe\arquitectura\banquito\loan\controller\AmortizationController.class
 ec\edu\espe\arquitectura\banquito\loan\dto\AmortizationRS$AmortizationRSBuilder.class
 ec\edu\espe\arquitectura\banquito\loan\model\Loan$LoanBuilder.class
 ec\edu\espe\arquitectura\banquito\loan\model\Loan.class
-ec\edu\espe\arquitectura\banquito\loan\config\Cors$1.class
 ec\edu\espe\arquitectura\banquito\loan\dto\RepaymentRS.class
 ec\edu\espe\arquitectura\banquito\loan\model\Amortization$AmortizationBuilder.class
 ec\edu\espe\arquitectura\banquito\loan\repository\LoanRepository.class

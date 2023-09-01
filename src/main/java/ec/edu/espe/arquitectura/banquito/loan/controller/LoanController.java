@@ -16,7 +16,7 @@ import ec.edu.espe.arquitectura.banquito.loan.service.LoanService;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/v2/loans")
+@RequestMapping("/api/v2/loans")
 public class LoanController {
     private final LoanService loanService;
 
